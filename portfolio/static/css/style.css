@@ -127,7 +127,7 @@ h6 {
 
 .bg-overlay.black {
     position: absolute;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(10, 10, 30, 0.94);
 }
 
 .section-header {
@@ -153,7 +153,7 @@ h6 {
     top: 60px;
     text-align: center;
     z-index: -1;
-    background: #FF0000;
+    background: rgb(128, 0, 32);
     margin-left: -40px;
 }
 
@@ -166,7 +166,7 @@ h6 {
     top: 53px;
     text-align: center;
     z-index: -1;
-    background: #FF0000;
+    background: rgb(128, 0, 32);
     margin-left: -7px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -297,7 +297,7 @@ h6 {
     .navbar-custom.top-nav-collapse {
         -webkit-box-shadow: 0px 0px 2px #777;
         box-shadow: 0px 0px 2px #777;
-        background-color: rgba(0, 0, 0, 0.97);
+        background-color: rgba(10, 10, 30, 0.97);
         box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
     }
     .navbar-custom.top-nav-collapse .nav li a {
@@ -318,7 +318,7 @@ h6 {
 
 .banner-area {
     height: 100%;
-    background: #222 url("../images/home/bg-home.png") no-repeat fixed 100% 100% / cover;
+    background: rgba(1, 24, 32, 0.7) url("../images/home/bg-home.png") no-repeat fixed 100% 100% / cover;
     padding: 0;
     position: relative;
     max-height: 600px;
@@ -352,7 +352,7 @@ h6 {
     color: #fff;
     padding: 10px 20px;
     text-transform: uppercase;
-    background: #FF0000;
+    background: rgb(128, 0, 32);
     margin-top: 20px;
     /width: 160px;
     border-radius: 30px;
@@ -368,7 +368,7 @@ h6 {
 
 .line {
     height: 2px;
-    background: #FF0000;
+    background: rgb(128, 0, 32);
     width: 200px;
 }
 
@@ -394,7 +394,7 @@ h6 {
     color: #fff;
     padding: 10px 20px;
     text-transform: uppercase;
-    background: #FF0000;
+    background: rgb(128, 0, 32);
     margin-top: 20px;
     /width: 160px;
     border-radius: 30px;
@@ -428,11 +428,11 @@ h6 {
 }
 
 .single-service:hover i {
-    color: #FF0000;
+    color: rgb(176, 196, 222);
     padding: 0;
 }
 .single-service:hover h2 {
-    color: #FF0000;
+    color: rgb(176, 196, 222);
 }
 
 /*--- 6. services area ends ---*/
@@ -456,7 +456,7 @@ h6 {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(1, 24, 32, 0.7);
+    background: rgba(0, 27, 37, 0.94);
     color: #fff;
     opacity: 0;
     -webkit-transition: .7s;
@@ -524,16 +524,16 @@ h6 {
 }
 
 .gallery-text h2 {
-    color: #e00000;
-    font-size: 16px;
+    color: #fffcfc;
+    font-size: 14px;
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 400;
 }
 
 .gallery-text p {
-    color: #ffffff;
-    font-size: 14px;
+    color: #bbbbbb;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 300;
@@ -628,7 +628,7 @@ h6 {
     color: #fff;
     padding: 10px 20px;
     text-transform: uppercase;
-    background: #FF0000;
+    background: rgb(128, 0, 32);
     margin-top: 20px;
     border-radius: 30px;
     margin-left: 5px;
@@ -658,7 +658,7 @@ h6 {
 }
 
 .btn.btn-send {
-    background: #FF0000;
+    background: rgb(128, 0, 32);
     color: #ffffff;
     border-radius: 25px;
     padding: 15px 20px;
@@ -679,7 +679,7 @@ h6 {
     color: #ffffff;
 }
 .footer-area p a{
-    color: #FF0000;
+    color: rgb(128, 0, 32);
 }
 
 /*--------------- Footer area ends -------------*/
