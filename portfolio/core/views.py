@@ -9,6 +9,6 @@ class HomeTemplateView(TemplateView):
     def get_context_data(self, **kwargs: Any):
         context = super().get_context_data(**kwargs)
         context['about'] = About.objects.first()
-        context['services'] = Service.objects.first()
-        context['works'] = RecentWork.objects.first()
+        context['services'] = Service.objects.all()
+        context['works'] = RecentWork.objects.all()
         return  context

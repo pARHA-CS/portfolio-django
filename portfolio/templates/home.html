@@ -25,11 +25,11 @@
             <div class="row">
                 <div class="col-md-7 col-sn-8 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s">
                     <div class="about-left">
-                        <h2 class="section-title">About Me</h2>
+                        <h2 class="section-title">À propos de moi</h2>
                         <div class="line"></div>
                         <h4>{{ about.short_description }}</h4>
                         <p>{{ about.description }}</p>
-                        <a href="images/about/cv.jpg" download>Download CV&nbsp;<i class="fa fa-download"></i></a>
+                        <a href="media/about/CV_Raphael_Mercier.pdf" download>Download CV&nbsp;<i class="fa fa-download"></i></a>
                     </div>
                 </div>
                 <div class="col-md-5 visible-md visible-lg wow fadeInDown" data-wow-delay="0.6s">
@@ -72,7 +72,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header">
-                        <h2>My Recent Works</h2>
+                        <h2>Mes Projets</h2>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,9 @@
 
                             <div class="gallery-text">
                                 <h2>{{ work.title }}</h2>
+                                <p>{{ work.description }}</p>
                             </div>
+
                         </div>
                     </div>
                 {% endfor %}
@@ -96,7 +98,7 @@
 
     {#    Contact section#}
 
-    <div class="invitation-area section-padding">
+    {% comment %} <div class="invitation-area section-padding">
         <div class="container">
             <div class="row">
                 <div class="single-invite text-center">
@@ -107,7 +109,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> {% endcomment %}
 
     <div id="contact" class="contact-area section-padding">
         <div class="container">

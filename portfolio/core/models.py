@@ -24,6 +24,8 @@ class Service(models.Model):
 # Recent Work Model
 class RecentWork(models.Model):
     title:models.CharField = models.CharField(max_length=100, verbose_name= "Nom du projet")
+    description: models.TextField = models.TextField()
+    technology: models.CharField = models.CharField(max_length=20)
     image = models.ImageField(upload_to = "projets")
     
     def __str__(self):
