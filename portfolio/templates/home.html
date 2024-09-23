@@ -80,15 +80,13 @@
                 {% for work in works %}
                     <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
                         <div class="gallery-items">
-                            <a class="view img" href="{{ work.image.url }}">
-                                <img src="{{ work.image.url }}" alt="work image">
+                            <a class="view img" href="{% url 'project_detail' slug=work.slug %}">
+                                <img src="{{ work.image.url }}" alt="{{ work.title }}">
                             </a>
-
                             <div class="gallery-text">
                                 <h2>{{ work.title }}</h2>
                                 <p>{{ work.description }}</p>
                             </div>
-
                         </div>
                     </div>
                 {% endfor %}

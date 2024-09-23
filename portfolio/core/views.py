@@ -1,5 +1,5 @@
 from typing import Any
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView
 from .models import About, Service, RecentWork, Client
 
@@ -12,3 +12,7 @@ class HomeTemplateView(TemplateView):
         context['services'] = Service.objects.all()
         context['works'] = RecentWork.objects.all()
         return  context
+    
+def project_detail(request, slug):
+    project = get_object_or_404(RecentWork, slug=slug)
+    return render(request, 'projects/project_detail.html', {'project': project})
