@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Top banner for Projects -->
+    <div id="projects-banner" class="banner-area section-padding">
+        <div class="bg-overlay black"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="welcome-text">
+                        <div class="name-area wow fadeInDown" data-wow-delay="0.2s">
+                            Liste de mes projets
+                        </div>
+                        <h1 class="wow fadeInDown" data-wow-delay="0.4s">
+                            Explorez mes réalisations
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio" class="portfolio-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center">
+                        <h2>Mes Projets</h2>
+                    </div>
+                </div>
+            </div>
+            {% comment %} <div class="row">
+                {% for work in works %}
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="gallery-items">
+                            <a class="view img" href="{% url 'project_detail' slug=work.slug %}">
+                                <img src="{{ work.image.url }}" alt="{{ work.title }}" class="img-responsive">
+                            </a>
+                            <div class="gallery-text">
+                                <h3>{{ work.title }}</h3>
+                                <p>{{ work.short_description }}</p>
+                                <a href="{% url 'project_detail' slug=work.slug %}" class="my-btn-1">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div> {% endcomment %}
+
+            <ul class="project-list">
+                {% for work in works %}
+                    <li>
+                        <div class="project-item">
+                            <a href="{% url 'project_detail' slug=work.slug %}">
+                                <img src="{{ work.image.url }}" alt="{{ work.title }}">
+                                <div class="project-info">
+                                    <h2>{{ work.title }}</h2>
+                                    <p>{{ work.description }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            
+        </div>
+    </div>
+
+{% endblock %}

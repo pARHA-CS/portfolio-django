@@ -3,7 +3,7 @@
 {% block content %}
     <div class="container">
         <h1>{{ project.title }}</h1>
-        <img src="{{ project.image.url }}" alt="{{ project.title }}">
+        {% comment %} <img src="{{ project.image.url }}" alt="{{ project.title }}"> {% endcomment %}
         <p><strong>Technologie utilisée :</strong> {{ project.technology }}</p>
         <p>{{ project.description }}</p>
         <a href="{% url 'project_list' %}">Retour à la liste des projets</a>

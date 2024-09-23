@@ -19,4 +19,4 @@ def project_detail(request, slug):
 
 def project_list(request):
     works = RecentWork.objects.all()  # Récupère tous les projets
-    return render(request, 'projects/project_list.html', {'works': works})
+    return render(request, 'projects/project_list_copy.html', {'works': works})
