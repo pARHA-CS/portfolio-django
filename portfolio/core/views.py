@@ -16,3 +16,7 @@ class HomeTemplateView(TemplateView):
 def project_detail(request, slug):
     project = get_object_or_404(RecentWork, slug=slug)
     return render(request, 'projects/project_detail.html', {'project': project})
+
+def project_list(request):
+    works = RecentWork.objects.all()  # Récupère tous les projets
+    return render(request, 'projects/project_list.html', {'works': works})

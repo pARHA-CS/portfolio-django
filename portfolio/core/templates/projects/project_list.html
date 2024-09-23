@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Mes Projets{% endblock %}
+
+{% block content %}
+    <h1>Mes Projets</h1>
+    <div class="project-list">
+        {% for work in works %}
+            <div class="project-item">
+                <a href="{% url 'project_detail' slug=work.slug %}">
+                    <img src="{{ work.image.url }}" alt="{{ work.title }}">
+                    <h2>{{ work.title }}</h2>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
