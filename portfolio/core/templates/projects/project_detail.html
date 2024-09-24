@@ -1,53 +1,31 @@
 {% extends 'base.html' %}
+{% load markdown_extras %}
+
+{% block title %}{{ project.title }}{% endblock %}
 
 {% block content %}
-    <div class="container">
-        <h1>{{ project.title }}</h1>
+<div class="container">
+    <h1>{{ project.title }}</h1>
+    <img src="{{ project.image.url }}" alt="{{ project.title }}">
 
-        <div class="project-code">
-            <h2>Version Code</h2>
-            <p>Vous pouvez trouver le code source ici : <a href="{{ project.code_url }}" target="_blank">Voir le code</a></p>
-        </div>
+    <h2>Description du projet</h2>
+    <p>{{ project.description }}</p>
 
-        <div class="project-slideshow">
-            <h2>Version Diaporama</h2>
-            <div class="slideshow-container">
-                <!-- Incluez ici votre diaporama, par exemple avec des images -->
-                {% for image in project.slideshow_images %}
-                    <div class="mySlides fade">
-                        <img src="{{ image.url }}" style="width:100%">
-                    </div>
-                {% endfor %}
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-        </div>
+    <h2>Technologie utilisée</h2>
+    <p>{{ project.technology }}</p>
 
-        <a href="{% url 'project_list' %}">Retour à la liste des projets</a>
-    </div>
+    {# Section pour la diapo (affiche si elle existe) #}
+    {% if project.diapo %}
+        <h2>Diapo du projet</h2>
+        <a href="{{ project.diapo.url }}" target="_blank">Voir la diapo</a>  <!-- Lien pour télécharger ou voir la diapo -->
+    {% endif %}
 
-    <script>
-        // JavaScript pour le diaporama
-        let slideIndex = 1;
-        showSlides(slideIndex);
+    {# Section pour afficher le code #}
+    {% if project.code %}
+        <h2>Code du projet</h2>
+        <pre><code>{{ project.code|markdown }}</code></pre>
+    {% endif %}
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-    </script>
+    <a href="{% url 'project_list' %}">Retour à la liste des projets</a>
+</div>
 {% endblock %}

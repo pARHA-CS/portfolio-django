@@ -29,7 +29,9 @@ class RecentWork(models.Model):
     technology: models.CharField = models.CharField(max_length=20)
     image = models.ImageField(upload_to = "projets")
     slug: models.SlugField = models.SlugField(unique=True, blank=True)  # Réintroduis unique=True
-
+    diapo = models.FileField(upload_to='diapos/', blank=True, null=True)  # Champ pour télécharger la diapo (PDF, PPT, etc.)
+    code: models.TextField = models.TextField(blank=True, null=True)  # Champ pour le code du projet
+    
     def save(self, *args, **kwargs):
         if not self.slug:
             base_slug = slugify(self.title)
