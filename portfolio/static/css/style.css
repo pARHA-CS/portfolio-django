@@ -172,6 +172,21 @@ h6 {
     transform: rotate(45deg);
 }
 
+.bg-overlay-projects {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10%;
+}
+
+.bg-overlay-projects.black {
+    position: absolute;
+    background: rgba(10, 10, 30, 0.94);
+}
+
 /*--- 1. Default CSS Ends ---*/
 
 /*-------------- 2. Preloader css starts ---------------*/
@@ -362,6 +377,19 @@ h6 {
 
 }
 
+/*--- 4bis. Banner area css projects ---*/
+
+.banner-area-projects{
+    height: 100%;
+    background: rgba(1, 24, 32, 0.7) url("../images/home/bg-home.png") no-repeat fixed 100% 100% / cover;
+    padding: 0;
+    position: relative;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+/*--- 4bis. Banner area css projects ends---*/
+
 /*--- 4. Banner area css ends ---*/
 
 /*--- 5. About area css starts ---*/
@@ -545,6 +573,47 @@ h6 {
     letter-spacing: .05em;
     font-weight: 300;
 }
+
+/*---8-bis. Projects---*/
+
+
+.project-list {
+    list-style-type: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+}
+
+.project-list li {
+    margin-bottom: 20px; /* Espace entre les projets */
+}
+
+.project-item {
+    border: 1px solid #ccc; /* Bordure pour chaque projet */
+    padding: 10px;
+    display: flex; /* Pour aligner l'image et le texte */
+    align-items: flex-start; /* Aligne les éléments au début */
+}
+
+.project-item img {
+    width: 150px; /* Largeur de l'image */
+    height: auto; /* Maintient le ratio d'aspect */
+    margin-right: 15px; /* Espace entre l'image et le texte */
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column; /* Colonne pour titre et description */
+}
+
+.project-item h2 {
+    margin: 0 0 5px; /* Espace autour du titre */
+}
+
+.project-item p {
+    color: #666; /* Couleur de la description */
+    font-size: 14px; /* Taille de la police */
+    line-height: 1.5; /* Hauteur de ligne pour plus de lisibilité */
+}
+/*---7-bis. Projects area css ends---*/
 
 /*---portfolio ends---*/
 
