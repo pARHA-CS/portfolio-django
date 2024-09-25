@@ -613,6 +613,11 @@ h6 {
     font-size: 14px; /* Taille de la police */
     line-height: 1.5; /* Hauteur de ligne pour plus de lisibilité */
 }
+
+.container img {
+    width: 20%;
+    height: auto;
+}
 /*---7-bis. Projects area css ends---*/
 
 /*---portfolio ends---*/

@@ -31,6 +31,7 @@ class RecentWork(models.Model):
     slug: models.SlugField = models.SlugField(unique=True, blank=True)  # Réintroduis unique=True
     diapo = models.FileField(upload_to='diapos/', blank=True, null=True)  # Champ pour télécharger la diapo (PDF, PPT, etc.)
     code: models.TextField = models.TextField(blank=True, null=True)  # Champ pour le code du projet
+    github_repo = models.CharField(max_length=100, blank=True, null=True)  # e.g., 'username/repo_name'
     
     def save(self, *args, **kwargs):
         if not self.slug:

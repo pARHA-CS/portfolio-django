@@ -26,6 +26,13 @@
         <pre><code>{{ project.code|markdown }}</code></pre>
     {% endif %}
 
+    {% if readme %}
+        <h2>README du projet</h2>
+        <pre>{{ readme }}</pre>
+    {% else %}
+        <p>Pas de README disponible pour ce projet.</p>
+    {% endif %}
+
     <a href="{% url 'project_list' %}">Retour à la liste des projets</a>
 </div>
 {% endblock %}
