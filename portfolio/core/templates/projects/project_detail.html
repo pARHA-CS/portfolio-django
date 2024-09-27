@@ -22,7 +22,7 @@
 <div id="portfolio" class="portfolio-area section-padding">
     
     {# Ajout de l'image du projet en plein écran en dessous du bandeau bleu #}
-    <div class="project-image-fullwidth" style="background-image: url('{{ project.image.url }}');"></div>
+    {% comment %} <div class="project-image-fullwidth" style="background-image: url('{{ project.image.url }}');"></div> {% endcomment %}
 
     <div class="container">
 
@@ -64,5 +64,5 @@
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true });
 </script>
-
+</div>
 {% endblock %}
