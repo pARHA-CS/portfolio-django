@@ -377,6 +377,47 @@ h6 {
 
 }
 
+.welcome-text-project {
+    text-align: center;
+    color: #fff;
+    padding-top: 250px;
+}
+
+.welcome-text-project h1 {
+    font-size: 40px;
+    color: #fff;
+    line-height: 50px;
+    margin: 30px 0px;
+}
+
+.welcome-text-project .name-area {
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    text-transform: uppercase;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+.welcome-text-project a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background: rgb(128, 0, 32);
+    margin-top: 20px;
+    /width: 160px;
+    border-radius: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+
+}
+
+.welcome-text-project {
+    padding-top: 100px;  /* Centrer verticalement le texte dans la bannière */
+}
+
 /*--- 4bis. Banner area css projects ---*/
 
 .banner-area-projects{
@@ -386,6 +427,32 @@ h6 {
     position: relative;
     max-height: 100px;
     overflow: hidden;
+}
+
+/* Réduire la hauteur du fond bleu pour les pages projets */
+#projects-banner {
+    max-height: 300px; /* Ajuste la hauteur à 300px */
+    padding: 50px 0;   /* Ajoute un padding pour centrer verticalement le texte */
+}
+
+/* Centrer l'image du projet */
+.container img {
+    width: 80%;
+    height: auto;
+}
+
+.container-project img {
+    width: 20%;
+    height: auto;
+}
+
+.project-image-fullwidth {
+    width: 100%;
+    height: 400px;
+    background-size: 20%; /* Dézoome encore plus l'image */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
 }
 
 /*--- 4bis. Banner area css projects ends---*/
@@ -410,7 +477,7 @@ h6 {
 }
 
 .about-left h4 {
-    text-transform: capitalize;
+    text-transform: none;
     font-weight: 400;
     font-size: 22px;
     line-height: 34px;
@@ -580,17 +647,21 @@ h6 {
 .project-list {
     list-style-type: none; /* Enlève les puces */
     padding: 0; /* Enlève le padding par défaut */
+    margin: 0; /* Enlève les marges par défaut */
 }
 
 .project-list li {
     margin-bottom: 20px; /* Espace entre les projets */
 }
 
+
+
 .project-item {
     border: 1px solid #ccc; /* Bordure pour chaque projet */
     padding: 10px;
     display: flex; /* Pour aligner l'image et le texte */
     align-items: flex-start; /* Aligne les éléments au début */
+    justify-content: flex-start; /* Aligne les éléments à gauche */
 }
 
 .project-item img {
@@ -614,10 +685,7 @@ h6 {
     line-height: 1.5; /* Hauteur de ligne pour plus de lisibilité */
 }
 
-.container img {
-    width: 20%;
-    height: auto;
-}
+
 /*---7-bis. Projects area css ends---*/
 
 /*---portfolio ends---*/
@@ -757,3 +825,102 @@ h6 {
 }
 
 /*--------------- Footer area ends -------------*/
+
+/* Style pour la boîte README */
+.readme-box {
+    border: 1px solid #ddd; /* Bord fin de couleur grise claire */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 15px; /* Espace intérieur (padding) */
+    background-color: #f9f9f9; /* Couleur de fond légèrement grisée */
+    font-size: 14px; /* Taille de texte plus petite */
+    max-height: 600px; /* Limite la hauteur pour éviter d'occuper trop de place */
+    overflow-y: auto; /* Ajouter une barre de défilement si le contenu dépasse la hauteur max */
+    margin: 20px 0; /* Espacement au-dessus et en-dessous de la boîte */
+    /* Ajout pour gérer la largeur */
+    width: 100%; /* Par exemple, occuper 90% de la largeur de la page */
+    max-width: 1200px; /* Limite la largeur maximale pour les grands écrans */
+    margin-left: auto; /* Centre la boîte horizontalement */
+    margin-right: auto; /* Centre la boîte horizontalement */
+    overflow-x: auto; /* Ajouter une barre de défilement horizontale si le contenu dépasse la largeur */
+}
+
+/* Style pour les blocs de code (comme la boîte que tu as partagée) */
+.readme-box pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Ajoute une barre de défilement horizontale si le texte dépasse la largeur */
+    white-space: pre; /* Conserve la mise en forme exacte (espaces et retours à la ligne) */
+    font-family: 'Courier New', monospace; /* Utiliser une police monospace pour le code */
+}
+
+/* Optionnel : Ajuste la taille des éléments en ASCII (comme les boîtes de texte) */
+.readme-box pre code {
+    font-size: 11px; /* Taille ajustable pour que le contenu tienne mieux */
+}
+
+
+/* Optionnel : Style pour les liens dans le README */
+.readme-box a {
+    color: #007bff; /* Couleur de lien bleue */
+    text-decoration: underline; /* Style des liens */
+}
+
+/* Optionnel : Style pour les images dans le README */
+/* Style pour les images dans la boîte README */
+.readme-box img {
+    max-width: 90%; /* Assure que l'image ne dépasse pas la largeur de la boîte */
+    height: auto; /* Garde les proportions de l'image */
+    width: 60%; /* Définit la largeur de l'image à 80% de la largeur de la boîte */
+    margin: 20px 0; /* Ajoute un espacement au-dessus et en dessous des images */
+    display: block; /* S'assure que l'image occupe une ligne entière */
+    margin-left: auto; /* Centre l'image horizontalement */
+    margin-right: auto; /* Centre l'image horizontalement */
+}
+
+
+/* Style pour les tableaux */
+.readme-box table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.readme-box th, .readme-box td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.readme-box th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+
+/* Style pour les blocs de code */
+.readme-box pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Style pour les listes numérotées dans le README */
+.readme-box ol {
+    list-style-type: decimal; /* Numérotation 1, 2, 3, etc. */
+    margin-left: 20px; /* Indentation à gauche pour séparer du texte principal */
+    padding-left: 20px; /* Espace entre la numérotation et le texte */
+}
+
+/* Style pour les listes à puces dans le README */
+.readme-box ul {
+    list-style-type: disc; /* Utilise des puces (•) */
+    margin-left: 20px; /* Indentation à gauche pour séparer du texte principal */
+    padding-left: 20px; /* Espace entre la puce et le texte */
+}
+
+/* Style pour les éléments de liste (li) */
+.readme-box li {
+    line-height: 1.6; /* Augmente l'espacement entre les éléments de liste pour plus de lisibilité */
+    margin-bottom: 10px; /* Espace entre chaque élément de la liste */
+}
