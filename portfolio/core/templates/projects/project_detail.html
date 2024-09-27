@@ -19,44 +19,45 @@
     </div>
 </div>
 
-{# Ajout de l'image du projet en plein écran en dessous du bandeau bleu #}
-<div class="project-image-fullwidth" style="background-image: url('{{ project.image.url }}');"></div>
+<div id="portfolio" class="portfolio-area section-padding">
+    
+    {# Ajout de l'image du projet en plein écran en dessous du bandeau bleu #}
+    <div class="project-image-fullwidth" style="background-image: url('{{ project.image.url }}');"></div>
 
+    <div class="container">
 
-<div class="container">
+        <h3>Description du projet :</h3>
+        <p>{{ project.description }}</p>
 
-    <h3>Description du projet :</h3>
-    <p>{{ project.description }}</p>
+        <h3>Technologie utilisée :</h3>
+        <p>{{ project.technology }}</p>
 
-    <h3>Technologie utilisée :</h3>
-    <p>{{ project.technology }}</p>
+        {# Section pour la diapo (affiche si elle existe) #}
+        {% if project.diapo %}
+            <h3>Diapo du projet :</h3>
+            <a href="{{ project.diapo.url }}" target="_blank">Voir la diapo</a>
+        {% endif %}
 
-    {# Section pour la diapo (affiche si elle existe) #}
-    {% if project.diapo %}
-        <h3>Diapo du projet :</h3>
-        <a href="{{ project.diapo.url }}" target="_blank">Voir la diapo</a>
-    {% endif %}
+        {% if code %}
 
-    {% if code %}
+        {% endif %}
 
-    {% endif %}
+        {# Affichage du README GitHub #}
+        {% if readme %}
+            <h3>README du projet : </h3>
+            <div class="readme-box">
+                {{ readme|safe }} <!-- Utiliser |safe pour afficher le HTML -->
+            </div>
+        {% else %}
+            <p>Pas de README disponible pour ce projet.</p>
+        {% endif %}
 
-    {# Affichage du README GitHub #}
-    {% if readme %}
-        <h3>README du projet : </h3>
-        <div class="readme-box">
-            {{ readme|safe }} <!-- Utiliser |safe pour afficher le HTML -->
+        <div class="mt-4">
+            <a href="{% url 'project_list' %}" class="text-decoration-none">
+                <h6>Retour à la liste des projets</h6>
+            </a>
         </div>
-    {% else %}
-        <p>Pas de README disponible pour ce projet.</p>
-    {% endif %}
-
-    <div class="mt-4">
-        <a href="{% url 'project_list' %}" class="text-decoration-none">
-            <h6>Retour à la liste des projets</h6>
-        </a>
     </div>
-
 {# Script Mermaid pour les diagrammes Mermaid #}
 {# Insertion du script Mermaid #}
 <script type="module">

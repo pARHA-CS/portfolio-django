@@ -12,6 +12,7 @@ Table of content
 9. Invitation area css
 10. Contact area css
 11. Footer area css
+12. Caroussel css
 
 */
 
@@ -654,25 +655,36 @@ h6 {
     margin-bottom: 20px; /* Espace entre les projets */
 }
 
-
-
 .project-item {
-    border: 1px solid #ccc; /* Bordure pour chaque projet */
-    padding: 10px;
-    display: flex; /* Pour aligner l'image et le texte */
-    align-items: flex-start; /* Aligne les éléments au début */
-    justify-content: flex-start; /* Aligne les éléments à gauche */
+    max-width: 80em; /* Limite la largeur maximale */
+    margin: 10px auto; /* Centre les blocs et ajoute un espacement vertical */
+    padding: 10px; /* Ajoute un espacement interne */
+    border: 1px solid #ccc; /* Ajoute une bordure pour délimiter les projets */
+    border-radius: 5px; /* Arrondit les coins */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour rendre l'effet fluide */
+}
+
+.project-item:hover {
+    transform: scale(1.05); /* Agrandit le bloc légèrement */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre autour du bloc */
 }
 
 .project-item img {
     width: 150px; /* Largeur de l'image */
     height: auto; /* Maintient le ratio d'aspect */
     margin-right: 15px; /* Espace entre l'image et le texte */
+    transition: filter 0.3s ease; /* Transition pour l'image */
+}
+
+.project-item:hover img {
+    filter: brightness(1.2); /* Assombrit l'image lorsque la souris survole */
 }
 
 .project-info {
     display: flex;
     flex-direction: column; /* Colonne pour titre et description */
+    padding: 10px; /* Ajoute un peu d'espace autour des informations du projet */
 }
 
 .project-item h2 {
@@ -683,6 +695,12 @@ h6 {
     color: #666; /* Couleur de la description */
     font-size: 14px; /* Taille de la police */
     line-height: 1.5; /* Hauteur de ligne pour plus de lisibilité */
+}
+
+.project-item a {
+    display: block; /* Assurez-vous que l'élément <a> occupe tout l'espace */
+    text-decoration: none; /* Enlève le soulignement du lien */
+    color: inherit; /* Fait en sorte que la couleur du texte soit la même que celle du reste du texte */
 }
 
 
@@ -924,3 +942,108 @@ h6 {
     line-height: 1.6; /* Augmente l'espacement entre les éléments de liste pour plus de lisibilité */
     margin-bottom: 10px; /* Espace entre chaque élément de la liste */
 }
+
+/*--- 12. Caroussel CSS Starts ---*/
+/* Style général pour le carrousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* Ajuste la largeur pour montrer 3 images à la fois */
+    width: calc(100% * 3); 
+}
+
+.carousel-item {
+    min-width: calc(100% / 3); /* Une image occupe un tiers de l'espace visible */
+    flex-shrink: 0;
+    padding: 0 15px; /* Espacement entre les images */
+}
+
+/* Boutons de navigation */
+/* Positionner les flèches correctement */
+/* Conteneur du carrousel */
+.carousel-container {
+    position: relative;  /* Pour permettre aux flèches d'être positionnées par rapport à ce conteneur */
+    display: flex;       /* Utiliser Flexbox */
+    justify-content: center; /* Centrer les images du carrousel */
+    align-items: center;  /* Centrer verticalement les éléments */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Wrapper pour les éléments du carrousel */
+.carousel-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+/* Les items du carrousel avec 3 images visibles */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: calc(100% / 3); /* 3 images visibles */
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.carousel-item img {
+    width: 100%; /* L'image occupe toute la largeur de l'item */
+    max-height: 500px; /* Limiter la hauteur des images */
+    object-fit: cover; /* Gérer le recadrage de l'image si nécessaire */
+}
+
+/* Positionner les flèches correctement */ 
+.carousel-control {
+    position: absolute;
+    top: 50%;  /* Alignement vertical centré */
+    transform: translateY(-50%);
+    background-color: rgba(128, 0, 32, 0.75);  /* Fond semi-transparent */
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;  /* Rendre les flèches rondes */
+}
+
+/* Flèche de gauche */
+.carousel-control.prev {
+    right: 10px;  /* Toujours à gauche */
+}
+
+/* Flèche de droite */
+.carousel-control.next {
+    left: 76.3em;  /* Toujours à droite */
+}
+
+
+.gallery-text {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/*--- 12. Caroussel CSS End ---*/
