@@ -212,7 +212,7 @@ h6 {
 
 .loader:before, .loader:after {
     content: '';
-    border: 1em solid #FF0000;
+    border: 1em solid rgb(168, 0, 42);
     border-radius: 50%;
     width: inherit;
     height: inherit;
@@ -254,7 +254,7 @@ h6 {
     font-size: 35px;
 }
 .navbar-custom .navbar-brand span{
-    color: #FF0000;
+    color: rgb(168, 0, 42);
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -321,7 +321,7 @@ h6 {
     }
     .navbar-custom.top-nav-collapse .nav li.active a {
         background-color: transparent;
-        color: #FF0000 !important;
+        color: rgb(168, 0, 42) !important;
     }
     .navbar-custom.top-nav-collapse .navbar-brand {
         color: #fff;
@@ -438,7 +438,7 @@ h6 {
 
 /* Centrer l'image du projet */
 .container img {
-    width: 80%;
+    width: 100%;
     height: auto;
 }
 
@@ -1005,7 +1005,7 @@ h6 {
 
 .carousel-item img {
     width: 100%; /* L'image occupe toute la largeur de l'item */
-    max-height: 500px; /* Limiter la hauteur des images */
+    max-height: 600px; /* Limiter la hauteur des images */
     object-fit: cover; /* Gérer le recadrage de l'image si nécessaire */
 }
 
